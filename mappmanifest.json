@@ -1,0 +1,11 @@
+{
+  "id": "chat",
+  "name": "Чат",
+  "version": "0.1.0",
+  "author": "mapphub",
+  "description": "Комнаты и сообщения",
+  "icon": "icon.svg",
+  "permissions": ["net", "share"],
+  "web": true,
+  "routes": { "root": "/", "app": "/index.html" }
+}

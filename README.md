@@ -1,2 +1,3 @@
-# app-chat
-Official Chat rooms mini-app
+# Чат
+
+Комнаты в MiniApps.fs. WS fanout — через шелл (следующая итерация).
