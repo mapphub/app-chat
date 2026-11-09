@@ -2,10 +2,10 @@
   "id": "chat",
   "name": "Чат",
   "version": "0.1.0",
-  "author": "mapphub",
-  "description": "Комнаты и сообщения",
+  "description": "Комнаты и сообщения по локальной сети",
   "icon": "icon.svg",
-  "permissions": ["net", "share"],
+  "author": "mapphub",
   "web": true,
+  "permissions": ["net", "share"],
   "routes": { "root": "/", "app": "/index.html" }
 }
