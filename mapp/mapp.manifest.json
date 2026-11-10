@@ -1,0 +1,12 @@
+{
+  "id": "chat",
+  "name": "Чат",
+  "version": "0.3.0",
+  "description": "LAN-чат",
+  "icon": "icon.svg",
+  "routes": { "root": "public", "app": "public", "client": "public" },
+  "server": { "host": true, "client": true, "network": true },
+  "permissions": ["net", "share", "db", "notify", "shell"],
+  "tags": ["social", "official"],
+  "author": "mapphub"
+}
