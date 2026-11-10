@@ -1,16 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-  <title>Чат</title>
-  <link rel="stylesheet" href="./shared.css"/>
-</head>
-<body>
-  <main class="page">
-    <h1>Чат</h1>
-    <p><a href="./host/">Хост</a> · <a href="./client/">Клиент</a></p>
-  </main>
-  <script src="./miniapps-bridge.js"></script>
-</body>
-</html>
+<html lang="ru"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Чат</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;display:flex;flex-direction:column;height:100dvh;background:#0e1621;color:#e4ecf2}
+#top{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#17212b;border-bottom:1px solid #0e1621}
+#top h1{flex:1;margin:0;font-size:16px;font-weight:600}
+#online{font-size:12px;color:#6ab3f3}
+#btnSettings{border:0;background:transparent;color:#6ab3f3;font-size:20px;width:40px;height:40px}
+#log{flex:1;overflow:auto;padding:12px 10px;display:flex;flex-direction:column;gap:6px}
+.row{display:flex;flex-direction:column;max-width:82%}
+.row.me{align-self:flex-end;align-items:flex-end}
+.row .bubble{padding:8px 12px;border-radius:14px;font-size:15px;line-height:1.35;word-break:break-word}
+.row:not(.me) .bubble{background:#182533;border-bottom-left-radius:4px}
+.row.me .bubble{background:#2b5278;border-bottom-right-radius:4px}
+.row .meta{font-size:11px;color:#6d7f8f;margin:2px 6px}
+#bar{display:flex;gap:8px;padding:10px;background:#17212b;align-items:center}
+#inp{flex:1;height:42px;border:0;border-radius:21px;padding:0 16px;background:#242f3d;color:#fff;font-size:15px}
+#send{width:42px;height:42px;border:0;border-radius:21px;background:#5288c1;color:#fff;font-size:18px}
+#sheet{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;z-index:10}
+#sheet.open{display:flex}
+#panel{width:100%;max-height:70%;background:#17212b;border-radius:16px 16px 0 0;padding:16px;overflow:auto}
+#panel h2{margin:0 0 12px;font-size:16px}
+#panel button{display:block;width:100%;text-align:left;border:0;background:#242f3d;color:#e4ecf2;padding:12px 14px;border-radius:10px;margin-bottom:8px;font-size:15px}
+#panel button.danger{color:#ff6b6b}
+#panel .user{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #242f3d;font-size:14px}
+#panel .user button{width:auto;margin:0;padding:6px 10px;font-size:12px}
+</style>
+</head><body>
+<div id="top">
+  <h1>Чат</h1>
+  <span id="online">—</span>
+  <button type="button" id="btnSettings" aria-label="Меню">⋮</button>
+</div>
+<div id="log"></div>
+<div id="bar">
+  <input id="inp" placeholder="Сообщение" autocomplete="off"/>
+  <button type="button" id="send">↑</button>
+</div>
+<div id="sheet"><div id="panel"></div></div>
+<script src="./app.js"></script>
+</body></html>

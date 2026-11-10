@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq zip
-      - name: Pack app.zip
-        run: |
+      - run: |
           mkdir -p dist-pkg
           for f in mappmanifest.json index.html style.css app.js icon.svg; do
             [ -f "$f" ] && cp "$f" dist-pkg/

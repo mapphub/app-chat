@@ -5,6 +5,6 @@
   "description": "LAN-чат с авторами и онлайн",
   "routes": { "app": ".", "client": "." },
   "permissions": ["net", "share", "db.local", "shell", "notify"],
-  "tags": ["chat", "official"],
+  "tags": ["social", "official"],
   "server": { "host": true, "client": true, "network": true }
 }
