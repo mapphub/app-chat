@@ -1,11 +1,10 @@
 {
   "id": "chat",
   "name": "Чат",
-  "version": "0.1.0",
-  "description": "Комнаты и сообщения по локальной сети",
-  "icon": "icon.svg",
-  "author": "mapphub",
-  "web": true,
-  "permissions": ["net", "share"],
-  "routes": { "root": "/", "app": "/index.html" }
+  "version": 2,
+  "description": "LAN-чат с авторами и онлайн",
+  "routes": { "app": ".", "client": "." },
+  "permissions": ["net", "share", "db.local", "shell", "notify"],
+  "tags": ["chat", "official"],
+  "server": { "host": true, "client": true, "network": true }
 }

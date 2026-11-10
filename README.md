@@ -1,3 +1,6 @@
-# Чат
+# app-chat
 
-Комнаты в MiniApps.fs. WS fanout — через шелл (следующая итерация).
+Порт `demos/chat` из HeadMad/mini-app-hub.
+Без `+server.js` — только MiniApps.net + MiniApps.db.local.
+
+Релиз: `app.zip` → catalog `packageUrl`.
